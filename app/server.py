@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, UploadFile
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from PIL import Image
 import io
 import torch
@@ -123,9 +123,14 @@ async def predict(file: UploadFile = File(...)):
         
         # Tahmin edilen görüntüyü yeniden boyutlandırıyoruz ve RGB formatına çeviriyoruz
         output_image = transforms.ToPILImage()(output_tensor.squeeze(0))
-        
-        # Yanıt olarak başarı durumu gönderiyoruz (görseli base64 olarak döndürebiliriz)
-        return JSONResponse(status_code=200, content={"message": "Prediction successful!"})
-    
+
+        # Görüntüyü byte stream olarak kaydediyoruz
+        byte_arr = io.BytesIO()
+        output_image.save(byte_arr, format='PNG')  # PNG veya JPG olarak kaydedebilirsiniz
+        byte_arr.seek(0)
+
+        # Yanıt olarak PNG görüntüsünü döndürüyoruz
+        return StreamingResponse(byte_arr, media_type="image/png")
+
     except Exception as e:
         return JSONResponse(status_code=500, content={"message": f"Error: {str(e)}"})
