@@ -15,10 +15,24 @@ This project is designed to convert grayscale images into color. The project is 
   <li> git clone https://github.com/RanaBetulKaya/GrayToColour_ImageProcessing.git</li>
 </ul>
 </p>
-<p><b>2.Download the Model:</b> Download the .pth model file from the provided Google Drive link and place it in the app/ directory.</p>
-<p><b>3.Build the Docker Image:</b> Navigate to the root directory of the project and build the Docker image:<br> docker build -t pix2pix_image .</p>
-<p><b>4.Run the Docker Container:</b> <br> Once the image is built, run the Docker container using the following command: <br> docker run --name pix2pix_container -p 8000:8000 pix2pix_image</p>
-<p><b>5.Access the API:</b> <br> After the container is running, you can access the application at http://localhost:8000.</p>
+<p><b>2.Download the Model:</b> 
+<ul>
+  <li> Download the .pth model file from the provided Google Drive link and place it in the app/ directory.</li>
+</ul>
+</p>
+<p><b>3.Build the Docker Image:</b> 
+<ul>
+  <li> Navigate to the root directory of the project and build the Docker image:</li>
+<br> docker build -t pix2pix_image .
+</ul>
+</p>
+<p><b>4.Run the Docker Container:</b> 
+<ul> 
+  <li>Once the image is built, run the Docker container using the following command:</li> <br> docker run --name pix2pix_container -p 8000:8000 pix2pix_image
+</ul>  
+</p>
+<p><b>5.Access the API:</b> <ul>
+<li> After the container is running, you can access the application at http://localhost:8000.</li></ul></p>
 
 
 
