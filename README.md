@@ -17,7 +17,8 @@ This project is designed to convert grayscale images into color. The project is 
 </p>
 <p><b>2.Download the Model:</b> 
 <ul>
-  <li> Download the .pth model file from the provided Google Drive link and place it in the app/ directory.</li>
+  <li> Download the .pth model file from the provided Google Drive link and place it in the app/ directory.</li><br>
+    ` https://drive.google.com/file/d/1DatbUzCuSm7QcPqEg7gtB60imLp_RMG3/view?usp=sharing `
 </ul>
 </p>
 <p><b>3.Build the Docker Image:</b> 
