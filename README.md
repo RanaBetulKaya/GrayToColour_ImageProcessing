@@ -33,7 +33,7 @@ This project is designed to convert grayscale images into color. The project is 
 </ul>  
 </p>
 <p><b>5.Access the API:</b> <ul>
-<li> After the container is running, you can access the application at  ` http://localhost:8000 ` .</li></ul></p>
+<li> After the container is running, you can access the application at  ` http://localhost:8000/docs ` .</li></ul></p>
 
 
 
